@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "600062182109",
+    "project_id": "zinngle-73d8e",
+    "storage_bucket": "zinngle-73d8e.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:600062182109:android:46c83130acd5a507fe9134",
+        "android_client_info": {
+          "package_name": "com.zinngle.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBPxqBRun7wKfSp939XPcxsZSHlLUP2Sfg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

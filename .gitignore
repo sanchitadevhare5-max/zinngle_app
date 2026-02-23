@@ -1,0 +1,23 @@
+# Node
+/node_modules/
+npm-debug.log
+yarn-error.log
+
+# Environment variables
+.env
+.env.local
+
+# Android
+/android/build/
+/android/app/build/
+/android/.gradle/
+/android/app/src/main/assets/index.android.bundle
+
+# iOS
+/ios/build/
+/ios/Pods/
+
+# Misc
+.DS_Store
+*.pem
+*.keystore

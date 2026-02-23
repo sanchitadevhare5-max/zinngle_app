@@ -1,0 +1,9 @@
+{
+  "name": "Zinngle",
+  "description": "A social video and voice calling app bridging creators and users with real-time engagement.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone",
+    "geolocation"
+  ]
+}
