@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { 
-    View, Text, StyleSheet, SafeAreaView, TouchableOpacity, Switch, 
-    TextInput, ScrollView, Platform, Alert
+    View, Text, StyleSheet, SafeAreaView, TouchableOpacity,
+    TextInput, ScrollView, Platform, Alert, Modal
 } from 'react-native';
 import DateTimePicker, { DateTimePickerEvent } from '@react-native-community/datetimepicker';
 import { useUser } from './UserContext';
@@ -9,6 +9,10 @@ import { supabase } from '../supabase';
 import { ViewState } from '../types';
 
 const INTERESTS = ['Music', 'Gaming', 'Art', 'Travel', 'Food', 'Comedy', 'Tech', 'Sports', 'Fashion'];
+
+const MAX_DATE = new Date();
+const MIN_DATE = new Date(MAX_DATE.getFullYear() - 100, 0, 1);
+const DEFAULT_DATE = new Date(MAX_DATE.getFullYear() - 18, MAX_DATE.getMonth(), MAX_DATE.getDate());
 
 interface OnboardingProps {
   currentView: ViewState;
@@ -21,12 +25,13 @@ const Onboarding: React.FC<OnboardingProps> = ({ currentView, onChangeView, onCo
   const [name, setName] = useState('');
   const [username, setUsername] = useState('');
   const [dob, setDob] = useState<Date | null>(null);
+  const [tempDob, setTempDob] = useState<Date>(DEFAULT_DATE);
   const [showDatePicker, setShowDatePicker] = useState(false);
   const [selectedInterests, setSelectedInterests] = useState<string[]>([]);
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    if (name && !username) { // Only generate if username is not already set
+    if (name && !username) {
       const randomSuffix = Math.floor(1000 + Math.random() * 9000);
       const generatedUsername = name.toLowerCase().replace(/\s+/g, '') + randomSuffix;
       setUsername(generatedUsername);
@@ -63,16 +68,34 @@ const Onboarding: React.FC<OnboardingProps> = ({ currentView, onChangeView, onCo
     } finally {
         setLoading(false);
     }
-  }
+  };
 
-  const handleDateChange = (event: DateTimePickerEvent, selectedDate?: Date) => {
-    setShowDatePicker(Platform.OS === 'ios');
-    if (selectedDate) {
+  const handleAndroidDateChange = (event: DateTimePickerEvent, selectedDate?: Date) => {
+    setShowDatePicker(false);
+    if (event.type === 'set' && selectedDate) {
       setDob(selectedDate);
     }
   };
 
-  const formattedDate = dob ? dob.toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' }) : 'Select your birth date';
+  const handleIosDateChange = (_event: DateTimePickerEvent, selectedDate?: Date) => {
+    if (selectedDate) {
+      setTempDob(selectedDate);
+    }
+  };
+
+  const confirmIosDate = () => {
+    setDob(tempDob);
+    setShowDatePicker(false);
+  };
+
+  const openDatePicker = () => {
+    setTempDob(dob || DEFAULT_DATE);
+    setShowDatePicker(true);
+  };
+
+  const formattedDate = dob
+    ? dob.toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' })
+    : 'Select your birth date';
 
   const renderContent = () => {
     switch (currentView) {
@@ -104,17 +127,51 @@ const Onboarding: React.FC<OnboardingProps> = ({ currentView, onChangeView, onCo
                 <TextInput style={styles.input} value={username} onChangeText={setUsername} placeholder="e.g., @johndoe" placeholderTextColor="#475569" autoCapitalize="none"/>
                 
                 <Text style={styles.label}>DATE OF BIRTH</Text>
-                <TouchableOpacity onPress={() => setShowDatePicker(true)} style={styles.input}>
+                <TouchableOpacity onPress={openDatePicker} style={styles.input}>
                     <Text style={[styles.dateText, !dob && {color: '#475569'}]}>{formattedDate}</Text>
                 </TouchableOpacity>
 
-                {showDatePicker && (
+                {Platform.OS === 'android' && showDatePicker && (
                     <DateTimePicker
-                        value={dob || new Date()}
+                        value={dob || DEFAULT_DATE}
                         mode="date"
-                        display="spinner"
-                        onChange={handleDateChange}
+                        display="calendar"
+                        onChange={handleAndroidDateChange}
+                        maximumDate={MAX_DATE}
+                        minimumDate={MIN_DATE}
                     />
+                )}
+
+                {Platform.OS === 'ios' && (
+                    <Modal
+                        transparent
+                        animationType="slide"
+                        visible={showDatePicker}
+                        onRequestClose={() => setShowDatePicker(false)}
+                    >
+                        <View style={styles.modalOverlay}>
+                            <View style={styles.modalContent}>
+                                <View style={styles.modalHeader}>
+                                    <TouchableOpacity onPress={() => setShowDatePicker(false)}>
+                                        <Text style={styles.modalCancelText}>Cancel</Text>
+                                    </TouchableOpacity>
+                                    <Text style={styles.modalTitle}>Date of Birth</Text>
+                                    <TouchableOpacity onPress={confirmIosDate}>
+                                        <Text style={styles.modalDoneText}>Done</Text>
+                                    </TouchableOpacity>
+                                </View>
+                                <DateTimePicker
+                                    value={tempDob}
+                                    mode="date"
+                                    display="spinner"
+                                    onChange={handleIosDateChange}
+                                    maximumDate={MAX_DATE}
+                                    minimumDate={MIN_DATE}
+                                    textColor="white"
+                                />
+                            </View>
+                        </View>
+                    </Modal>
                 )}
 
                 <TouchableOpacity style={styles.mainButton} onPress={() => onChangeView(ViewState.INTERESTS_SELECT)}>
@@ -177,6 +234,12 @@ const styles = StyleSheet.create({
     selectedChip: { backgroundColor: '#db2777', borderColor: '#db2777' },
     chipText: { color: 'white', fontWeight: 'bold' },
     selectedChipText: { color: 'white' },
+    modalOverlay: { flex: 1, justifyContent: 'flex-end', backgroundColor: 'rgba(0,0,0,0.6)' },
+    modalContent: { backgroundColor: '#1e293b', borderTopLeftRadius: 24, borderTopRightRadius: 24, paddingBottom: 32 },
+    modalHeader: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', padding: 16, borderBottomWidth: 1, borderBottomColor: '#334155' },
+    modalTitle: { color: 'white', fontSize: 16, fontWeight: 'bold' },
+    modalCancelText: { color: '#94a3b8', fontSize: 16 },
+    modalDoneText: { color: '#db2777', fontSize: 16, fontWeight: 'bold' },
 });
 
 export default Onboarding;
