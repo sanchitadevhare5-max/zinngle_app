@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { View, Text, StyleSheet, ScrollView, TouchableOpacity, Image, SafeAreaView, StatusBar } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { MOCK_HOSTS } from './constants';
+import { useUser } from './components/UserContext';
 
 const FILTER_TAGS = [
   { id: 'all', label: 'All', icon: '🌐' },
@@ -15,10 +16,20 @@ const DEFAULT_AVATAR = 'https://via.placeholder.com/150/1e293b/FFFFFF?text=Z';
 export default function HomePage() {
   const navigation = useNavigation<any>();
   const [activeFilter, setActiveFilter] = useState('all');
+  const { profile } = useUser();
 
   const filteredHosts = activeFilter === 'nearby'
     ? MOCK_HOSTS.filter((h: any) => h.distance && h.distance <= 10)
     : MOCK_HOSTS;
+
+  const avatarUri = profile?.avatar_url || DEFAULT_AVATAR;
+  const displayName = profile?.full_name || profile?.username || 'Welcome';
+  const initials = displayName
+    .split(' ')
+    .slice(0, 2)
+    .map((w: string) => w[0])
+    .join('')
+    .toUpperCase();
 
   return (
     <SafeAreaView style={styles.container}>
@@ -37,10 +48,23 @@ export default function HomePage() {
             <Text style={styles.coinEmojiLarge}>🪙</Text>
             <Text style={styles.coinBalanceLarge}>150</Text>
           </TouchableOpacity>
+          <TouchableOpacity onPress={() => navigation.navigate('Profile')} style={styles.avatarBtn}>
+            {profile?.avatar_url ? (
+              <Image source={{ uri: avatarUri }} style={styles.avatarImage} />
+            ) : (
+              <View style={styles.avatarPlaceholder}>
+                <Text style={styles.avatarInitials}>{initials}</Text>
+              </View>
+            )}
+          </TouchableOpacity>
         </View>
       </View>
 
       <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={styles.scrollContent}>
+        <View style={styles.greetingRow}>
+          <Text style={styles.greetingText}>Hello, <Text style={styles.greetingName}>{displayName}</Text> 👋</Text>
+        </View>
+
         <TouchableOpacity style={styles.promoBanner} onPress={() => {}}>
           <View style={styles.promoContent}>
             <Text style={styles.promoTitle}>Discover Hosts</Text>
@@ -106,6 +130,13 @@ const styles = StyleSheet.create({
   coinBadge: { flexDirection: 'row', alignItems: 'center', backgroundColor: '#1e293b', paddingHorizontal: 12, paddingVertical: 6, borderRadius: 24, marginLeft: 8, borderWidth: 1, borderColor: '#334155' },
   coinEmojiLarge: { fontSize: 16, marginRight: 6 },
   coinBalanceLarge: { color: 'white', fontWeight: 'bold', fontSize: 14 },
+  avatarBtn: { marginLeft: 10 },
+  avatarImage: { width: 36, height: 36, borderRadius: 18, borderWidth: 2, borderColor: '#db2777' },
+  avatarPlaceholder: { width: 36, height: 36, borderRadius: 18, backgroundColor: '#db2777', justifyContent: 'center', alignItems: 'center' },
+  avatarInitials: { color: 'white', fontSize: 13, fontWeight: 'bold' },
+  greetingRow: { paddingHorizontal: 20, paddingTop: 8, paddingBottom: 4 },
+  greetingText: { color: '#94a3b8', fontSize: 15 },
+  greetingName: { color: 'white', fontWeight: 'bold' },
   promoBanner: { marginHorizontal: 20, marginTop: 10, borderRadius: 32, backgroundColor: '#8b5cf6', overflow: 'hidden', padding: 24, flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' },
   promoContent: { zIndex: 2 },
   promoTitle: { color: 'white', fontSize: 22, fontWeight: 'bold', marginBottom: 4 },

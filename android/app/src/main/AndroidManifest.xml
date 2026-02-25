@@ -2,6 +2,9 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
 
+    <!-- Permissions for OTP Auto-read -->
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+
     <!-- Permissions for Video Calling (Agora) -->
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.RECORD_AUDIO" />

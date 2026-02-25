@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import {
   View,
   Text,
@@ -25,24 +25,24 @@ const PermissionsScreen: React.FC<PermissionsProps> = ({ onComplete }) => {
       const granted = await PermissionsAndroid.requestMultiple([
         PermissionsAndroid.PERMISSIONS.CAMERA,
         PermissionsAndroid.PERMISSIONS.RECORD_AUDIO,
+        PermissionsAndroid.PERMISSIONS.RECEIVE_SMS,
       ]);
 
-      if (
-        granted[PermissionsAndroid.PERMISSIONS.CAMERA] === PermissionsAndroid.RESULTS.GRANTED &&
-        granted[PermissionsAndroid.PERMISSIONS.RECORD_AUDIO] === PermissionsAndroid.RESULTS.GRANTED
-      ) {
-        console.log('You can use the camera and mic');
+      const cameraGranted = granted[PermissionsAndroid.PERMISSIONS.CAMERA] === PermissionsAndroid.RESULTS.GRANTED;
+      const micGranted = granted[PermissionsAndroid.PERMISSIONS.RECORD_AUDIO] === PermissionsAndroid.RESULTS.GRANTED;
+
+      if (cameraGranted && micGranted) {
         onComplete();
       } else {
         Alert.alert(
             'Permissions Required',
             'Camera and Microphone access is required for video calls. Please enable them in your device settings.',
-            [{ text: 'OK', onPress: onComplete }] // Still proceed, but user will be prompted again on call attempt
+            [{ text: 'OK', onPress: onComplete }]
         );
       }
     } catch (err) {
       console.warn(err);
-      onComplete(); // Proceed even if there is an error
+      onComplete();
     }
   };
 
@@ -52,7 +52,7 @@ const PermissionsScreen: React.FC<PermissionsProps> = ({ onComplete }) => {
         <Text style={styles.icon}>🤝</Text>
         <Text style={styles.title}>Permissions Required</Text>
         <Text style={styles.description}>
-          To provide the best experience, including video calls and other interactive features, we need access to your device's camera and microphone.
+          To provide the best experience, including video calls and OTP auto-fill, we need access to your device's camera, microphone, and SMS.
         </Text>
         <TouchableOpacity style={styles.button} onPress={requestPermissions}>
           <Text style={styles.buttonText}>Grant Permissions</Text>

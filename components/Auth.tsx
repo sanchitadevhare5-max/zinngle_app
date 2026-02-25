@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import {
   View,
   Text,
@@ -9,11 +9,9 @@ import {
   SafeAreaView,
   ScrollView,
   Alert,
-  Modal,
-  FlatList,
+  Platform,
 } from 'react-native';
 import { ViewState } from '../types';
-import { GoogleSignin } from '@react-native-google-signin/google-signin';
 import { supabase } from '../supabase';
 import { getOtp, startOtpListener, removeOtpListener } from 'react-native-otp-verify';
 
@@ -25,12 +23,10 @@ interface AuthProps {
 
 const COUNTRIES = [
     { code: '+91', flag: '🇮🇳', name: 'India' },
-    // Add other countries as needed
 ];
 
 const LANGUAGES = [
     { code: 'en', name: 'English', native: 'English' },
-    // Add other languages as needed
 ];
 
 export const Auth: React.FC<AuthProps> = ({ currentView, onChangeView, onComplete }) => {
@@ -43,19 +39,41 @@ export const Auth: React.FC<AuthProps> = ({ currentView, onChangeView, onComplet
   const [selectedCountry, setSelectedCountry] = useState(COUNTRIES[0]);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const [isAutoFilling, setIsAutoFilling] = useState(false);
+  const isVerifyingRef = useRef(false);
 
-  // --- OTP AUTO-READ --- 
   useEffect(() => {
     if (currentView === ViewState.OTP_VERIFY) {
-      getOtp().then(otp => setOtp(otp || ''));
-      startOtpListener(message => {
-        const otpMatch = /(\d{6})/g.exec(message);
-        if (otpMatch && otpMatch[1]) {
-          setOtp(otpMatch[1]);
+      setOtp('');
+      isVerifyingRef.current = false;
+
+      if (Platform.OS === 'android') {
+        try {
+          getOtp()
+            .then(otpValue => {
+              if (otpValue) setOtp(otpValue);
+            })
+            .catch(() => {});
+
+          startOtpListener(message => {
+            const otpMatch = /(\d{6})/g.exec(message);
+            if (otpMatch && otpMatch[1]) {
+              setIsAutoFilling(true);
+              setOtp(otpMatch[1]);
+              setTimeout(() => setIsAutoFilling(false), 1500);
+            }
+          });
+        } catch {
         }
-      });
+      }
+
       return () => {
-        removeOtpListener();
+        if (Platform.OS === 'android') {
+          try {
+            removeOtpListener();
+          } catch {
+          }
+        }
       };
     }
   }, [currentView]);
@@ -78,7 +96,8 @@ export const Auth: React.FC<AuthProps> = ({ currentView, onChangeView, onComplet
   };
 
   const handleOtpSubmit = async () => {
-    if (otp.length !== 6) return;
+    if (otp.length !== 6 || isVerifyingRef.current) return;
+    isVerifyingRef.current = true;
     setIsLoading(true);
     try {
       const { error } = await supabase.auth.verifyOtp({
@@ -89,17 +108,17 @@ export const Auth: React.FC<AuthProps> = ({ currentView, onChangeView, onComplet
       if (error) throw error;
       onComplete();
     } catch (error: any) {
+      isVerifyingRef.current = false;
       Alert.alert('Invalid OTP', error.message);
     } finally {
       setIsLoading(false);
     }
   };
 
-  // Automatically submit OTP when it's filled
   useEffect(() => {
-      if(otp.length === 6) {
-          handleOtpSubmit();
-      }
+    if (otp.length === 6 && !isVerifyingRef.current) {
+      handleOtpSubmit();
+    }
   }, [otp]);
 
   const BackButton = ({ targetView }: { targetView: ViewState }) => (
@@ -107,8 +126,7 @@ export const Auth: React.FC<AuthProps> = ({ currentView, onChangeView, onComplet
         <Text style={{color: 'white'}}>←</Text>
      </TouchableOpacity>
   );
-  
-  // Dummy components for other views to keep the file structure
+
   const renderOtherViews = () => {
       if (currentView === ViewState.LANGUAGE_SELECT) {
           return <View><Text style={styles.h2}>Language Selection</Text></View>
@@ -133,7 +151,23 @@ export const Auth: React.FC<AuthProps> = ({ currentView, onChangeView, onComplet
             <View style={{flex: 1, justifyContent: 'center'}}>
               <Text style={styles.h2}>Verify Code</Text>
               <Text style={styles.p}>Enter the code sent to {selectedCountry.code} {phone}</Text>
-              <TextInput style={styles.otpInput} value={otp} onChangeText={setOtp} maxLength={6} keyboardType="number-pad" placeholder="••••••" placeholderTextColor="#475569" autoFocus />
+              {isAutoFilling && (
+                <Text style={styles.autoFillHint}>✓ Code detected automatically</Text>
+              )}
+              <TextInput
+                style={[styles.otpInput, isAutoFilling && styles.otpInputAutoFilled]}
+                value={otp}
+                onChangeText={text => {
+                  isVerifyingRef.current = false;
+                  setOtp(text);
+                }}
+                maxLength={6}
+                keyboardType="number-pad"
+                placeholder="••••••"
+                placeholderTextColor="#475569"
+                autoFocus
+                textContentType="oneTimeCode"
+              />
               <TouchableOpacity onPress={handlePhoneSubmit} disabled={isLoading}>
                   <Text style={{color: '#db2777', textAlign: 'center', marginTop: 16}}>{isLoading ? 'Resending...' : 'Resend Code'}</Text>
               </TouchableOpacity>
@@ -155,7 +189,9 @@ const styles = StyleSheet.create({
   backButton: { position: 'absolute', top: 50, left: 20, zIndex: 1, width: 40, height: 40, borderRadius: 20, backgroundColor: '#1e293b', alignItems: 'center', justifyContent: 'center' },
   h2: { fontSize: 30, fontWeight: 'bold', color: 'white', marginBottom: 8, textAlign: 'center' },
   p: { fontSize: 16, color: '#94a3b8', marginBottom: 24, lineHeight: 24, textAlign: 'center' },
+  autoFillHint: { color: '#22c55e', fontSize: 14, textAlign: 'center', marginBottom: 8 },
   otpInput: { width: '100%', height: 60, backgroundColor: '#1e293b', borderRadius: 12, fontSize: 24, color: 'white', textAlign: 'center', letterSpacing: 16 },
+  otpInputAutoFilled: { borderWidth: 1, borderColor: '#22c55e' },
   mainButton: { backgroundColor: '#db2777', paddingVertical: 16, borderRadius: 12, alignItems: 'center' },
   mainButtonText: { color: 'white', fontWeight: 'bold', fontSize: 16 },
   disabledButton: { backgroundColor: '#db2777', opacity: 0.5 },
