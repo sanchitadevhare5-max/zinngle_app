@@ -1,26 +1,29 @@
 import React, { useState, useRef } from 'react';
-import { View, Text, StyleSheet, SafeAreaView, TouchableOpacity, FlatList, Dimensions } from 'react-native';
+import { View, Text, StyleSheet, SafeAreaView, TouchableOpacity, FlatList, Dimensions, StatusBar } from 'react-native';
 
-const { width } = Dimensions.get('window');
+const { width, height } = Dimensions.get('window');
 
 const INTRO_SCREENS = [
   {
     key: '1',
-    emoji: '📹',
+    emoji: '🎥',
     title: 'Live Video Calls',
-    description: 'Connect face-to-face with your favorite hosts. Experience real-time interaction like never before.',
+    description: 'Connect face-to-face with your favorite hosts anytime, anywhere. Experience real-time interaction like never before.',
+    color: '#FF3B5C', // Pinkish red
   },
   {
     key: '2',
     emoji: '🎁',
     title: 'Virtual Gifting',
     description: 'Support hosts by sending stunning virtual gifts during live sessions. Watch them come alive on screen!',
+    color: '#8B5CF6', // Purple
   },
   {
     key: '3',
     emoji: '👥',
     title: 'Join the Community',
     description: 'Whether you are a fan or a host, Zinngle is the place to be. Earn money by sharing your time and talent.',
+    color: '#F59E0B', // Orange
   },
 ];
 
@@ -40,8 +43,18 @@ const WelcomeIntro: React.FC<WelcomeIntroProps> = ({ onComplete }) => {
     }
   };
 
+  const onScroll = (event: any) => {
+    const x = event.nativeEvent.contentOffset.x;
+    const index = Math.round(x / width);
+    if (index !== currentIndex) {
+      setCurrentIndex(index);
+    }
+  };
+
   return (
     <SafeAreaView style={styles.container}>
+      <StatusBar barStyle="light-content" />
+      
       <TouchableOpacity style={styles.skipButton} onPress={onComplete}>
         <Text style={styles.skipText}>Skip</Text>
       </TouchableOpacity>
@@ -52,14 +65,12 @@ const WelcomeIntro: React.FC<WelcomeIntroProps> = ({ onComplete }) => {
         horizontal
         pagingEnabled
         showsHorizontalScrollIndicator={false}
-        onScroll={e => {
-          const x = e.nativeEvent.contentOffset.x;
-          setCurrentIndex(Math.round(x / width));
-        }}
+        onScroll={onScroll}
+        scrollEventThrottle={16}
         keyExtractor={item => item.key}
         renderItem={({ item }) => (
           <View style={styles.slide}>
-            <View style={styles.iconContainer}>
+            <View style={[styles.iconContainer, { backgroundColor: item.color }]}>
               <Text style={styles.icon}>{item.emoji}</Text>
             </View>
             <Text style={styles.title}>{item.title}</Text>
@@ -71,7 +82,13 @@ const WelcomeIntro: React.FC<WelcomeIntroProps> = ({ onComplete }) => {
       <View style={styles.footer}>
         <View style={styles.pagination}>
           {INTRO_SCREENS.map((_, i) => (
-            <View key={i} style={[styles.dot, i === currentIndex ? styles.activeDot : {}]} />
+            <View 
+              key={i} 
+              style={[
+                styles.dot, 
+                i === currentIndex ? styles.activeDot : styles.inactiveDot
+              ]} 
+            />
           ))}
         </View>
 
@@ -86,30 +103,99 @@ const WelcomeIntro: React.FC<WelcomeIntroProps> = ({ onComplete }) => {
 };
 
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: '#1a1a2e' },
-  skipButton: { position: 'absolute', top: 60, right: 24, zIndex: 1, padding: 8 },
-  skipText: { color: '#94a3b8', fontSize: 16 },
-  slide: { width, flex: 1, justifyContent: 'center', alignItems: 'center', paddingHorizontal: 40 },
+  container: { 
+    flex: 1, 
+    backgroundColor: '#0f172a' // Dark navy matching the screenshots
+  },
+  skipButton: { 
+    position: 'absolute', 
+    top: 50, 
+    right: 24, 
+    zIndex: 10,
+    padding: 8
+  },
+  skipText: { 
+    color: '#94a3b8', 
+    fontSize: 16,
+    fontWeight: '500'
+  },
+  slide: { 
+    width, 
+    flex: 1, 
+    justifyContent: 'center', 
+    alignItems: 'center', 
+    paddingHorizontal: 30 
+  },
   iconContainer: { 
-    width: 140,
-    height: 140,
-    borderRadius: 40,
-    backgroundColor: 'rgba(255, 255, 255, 0.1)',
+    width: 160,
+    height: 160,
+    borderRadius: 45,
     justifyContent: 'center',
     alignItems: 'center',
-    marginBottom: 60,
+    marginBottom: 50,
+    // Add shadow for better look
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 10 },
+    shadowOpacity: 0.3,
+    shadowRadius: 15,
+    elevation: 10,
   },
   icon: { 
-    fontSize: 60,
+    fontSize: 70,
   },
-  title: { color: 'white', fontSize: 28, fontWeight: 'bold', textAlign: 'center', marginBottom: 16 },
-  description: { color: '#e0e0e0', fontSize: 16, textAlign: 'center', lineHeight: 24, opacity: 0.8 },
-  footer: { padding: 32, paddingBottom: 48 },
-  pagination: { flexDirection: 'row', justifyContent: 'center', alignItems: 'center', marginBottom: 32 },
-  dot: { width: 8, height: 8, borderRadius: 4, backgroundColor: '#475569', marginHorizontal: 4 },
-  activeDot: { backgroundColor: '#db2777', width: 24 },
-  nextButton: { backgroundColor: 'white', paddingVertical: 18, borderRadius: 99, alignItems: 'center' },
-  nextButtonText: { color: '#1a1a2e', fontSize: 18, fontWeight: 'bold' },
+  title: { 
+    color: 'white', 
+    fontSize: 32, 
+    fontWeight: 'bold', 
+    textAlign: 'center', 
+    marginBottom: 20 
+  },
+  description: { 
+    color: '#94a3b8', 
+    fontSize: 17, 
+    textAlign: 'center', 
+    lineHeight: 26, 
+    paddingHorizontal: 10
+  },
+  footer: { 
+    paddingHorizontal: 32, 
+    paddingBottom: 50 
+  },
+  pagination: { 
+    flexDirection: 'row', 
+    justifyContent: 'center', 
+    alignItems: 'center', 
+    marginBottom: 40 
+  },
+  dot: { 
+    height: 8, 
+    borderRadius: 4, 
+    marginHorizontal: 4 
+  },
+  inactiveDot: {
+    width: 8,
+    backgroundColor: '#334155',
+  },
+  activeDot: { 
+    width: 24,
+    backgroundColor: 'white',
+  },
+  nextButton: { 
+    backgroundColor: 'white', 
+    paddingVertical: 18, 
+    borderRadius: 16, 
+    alignItems: 'center',
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.2,
+    shadowRadius: 5,
+    elevation: 5,
+  },
+  nextButtonText: { 
+    color: '#0f172a', 
+    fontSize: 18, 
+    fontWeight: 'bold' 
+  },
 });
 
 export default WelcomeIntro;

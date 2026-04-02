@@ -25,6 +25,7 @@ export const RAZORPAY_CONFIG = {
 
 export const TWILIO_CONFIG = {
   accountSid: "AC282272f3d30cb73fb41c9fbbfad6a28a",
+  authToken: "ca64d8bdb7f21fadb5f6ee99b5c8b5ce",
   fromPhoneNumber: "+919786629516"
 };
 
@@ -32,7 +33,7 @@ const newHostData = [
   { name: "Naina Singh", age: 21, phone: "9651807830" },
   { name: "Neha", age: 23, phone: "8894845634" },
   { name: "Anju Rathaur", age: 26, phone: "7355253730" },
-  { name: "सुषमा लोधी", age: 22, phone: "7415270874" },
+  { name: "सुषમા लोधी", age: 22, phone: "7415270874" },
   { name: "Riya kumari", age: 18, phone: "7256826757" },
   { name: "Ramkumari", age: 19, phone: "8602344328" },
   { name: "Pooja", age: 21, phone: "9509346945" },

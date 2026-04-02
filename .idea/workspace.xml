@@ -4,183 +4,156 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e71d5404-a4cd-4b0a-8bc9-5704b0542d53" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="2ba9eb06-3023-4630-a153-07e411dd405d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/components/screens/landingscreen.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/constants.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/supabase.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/translations.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/deviceManager.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deviceManager.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/studiobot.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/.gradle/8.6/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/8.6/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/.gradle/8.6/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/8.6/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/.gradle/8.6/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/8.6/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/.gradle/8.6/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/8.6/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/.gradle/8.6/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/8.6/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/file-system.probe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarn/cache/@babel-code-frame-npm-7.27.1-4dbcabb137-5874edc5d3.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarn/cache/@babel-compat-data-npm-7.28.5-41f8d327e8-d7bcb3ee71.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarn/cache/@babel-core-npm-7.28.5-cd68c2d8db-1ee35b2044.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarn/cache/@babel-eslint-parser-npm-7.28.5-8ec05c7754-8daaf6f24d.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarn/cache/@babel-generator-npm-7.28.5-fd8f3ae6b1-3e86fa0197.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarn/cache/@babel-helper-compilation-targets-npm-7.27.2-111dda04b6-7b95328237.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarn/cache/@babel-helper-create-class-features-plugin-npm-7.28.5-66442f56c0-98f94a27bc.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarn/cache/@babel-helper-define-polyfill-provider-npm-0.6.5-6bd5237c07-9fd3b09b20.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarn/cache/@babel-helper-module-imports-npm-7.27.1-3bf33978f4-92d01c71c0.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarn/cache/@babel-helper-module-transforms-npm-7.28.3-7b69ec189a-7cf7b79da0.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarn/cache/@babel-helper-plugin-utils-npm-7.27.1-4f91e7999b-5d71505530.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarn/cache/@babel-helper-replace-supers-npm-7.27.1-f784132f4b-3690266c30.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarn/cache/@babel-helper-wrap-function-npm-7.28.3-abf7c7bf1f-0ebdfdc918.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarn/cache/@babel-helpers-npm-7.28.4-d9f7567704-a8706219e0.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarn/cache/@babel-parser-npm-7.28.5-f2345a6b62-5c2456e3f2.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarn/cache/@babel-plugin-bugfix-v8-static-class-fields-redefine-readonly-npm-7.28.3-19e1b3699f-c810e5d360.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarn/cache/@babel-plugin-syntax-export-default-from-npm-7.27.1-69b039aa47-d9a6a9c51f.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarn/cache/@babel-plugin-syntax-flow-npm-7.27.1-116eb2a2ca-7baca3171e.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarn/cache/@babel-plugin-syntax-import-assertions-npm-7.27.1-2af23a0a52-fb661d6308.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarn/cache/@babel-plugin-syntax-import-attributes-npm-7.27.1-e7e02d37a0-97973982ff.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarn/cache/@babel-plugin-syntax-jsx-npm-7.27.1-2f6039b8f0-c6d1324cff.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarn/cache/@babel-plugin-syntax-typescript-npm-7.27.1-5d60015570-87836f7e32.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarn/cache/@babel-plugin-transform-async-generator-functions-npm-7.28.0-4436f2d50f-174aaccd7a.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarn/cache/@babel-plugin-transform-async-to-generator-npm-7.27.1-033d1809c3-d79d7a7ae7.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarn/cache/@babel-plugin-transform-block-scoping-npm-7.28.5-83f7baa513-2cbc11c9b6.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarn/cache/@babel-plugin-transform-class-properties-npm-7.27.1-f08223baf6-475a6e5a94.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarn/cache/@babel-plugin-transform-class-static-block-npm-7.28.3-13af84b676-9b2feaacbf.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarn/cache/@babel-plugin-transform-classes-npm-7.28.4-f261201c4b-f412e00c86.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarn/cache/@babel-plugin-transform-computed-properties-npm-7.27.1-ff3d364d1c-48bd20f7d6.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarn/cache/@babel-plugin-transform-dotall-regex-npm-7.27.1-cda1a36d12-2173e5b13f.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarn/cache/@babel-plugin-transform-duplicate-named-capturing-groups-regex-npm-7.27.1-17e5efed8f-2a10961353.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarn/cache/@babel-plugin-transform-explicit-resource-management-npm-7.28.0-8a17cc633d-a44140097e.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarn/cache/@babel-plugin-transform-exponentiation-operator-npm-7.28.5-b1db8006da-da9bb5acd3.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarn/cache/@babel-plugin-transform-json-strings-npm-7.27.1-65f3c4eee2-2c05a02f63.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarn/cache/@babel-plugin-transform-logical-assignment-operators-npm-7.28.5-6bdd0633bb-c76778f4b1.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarn/cache/@babel-plugin-transform-modules-commonjs-npm-7.27.1-2ad2271dea-bc45c1beff.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarn/cache/@babel-plugin-transform-modules-systemjs-npm-7.28.5-1fe3e218f1-646748dcf9.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarn/cache/@babel-plugin-transform-named-capturing-groups-regex-npm-7.27.1-12b8abead5-a711c92d97.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarn/cache/@babel-plugin-transform-nullish-coalescing-operator-npm-7.27.1-3a841ec416-1c6b373074.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarn/cache/@babel-plugin-transform-numeric-separator-npm-7.27.1-a8403cac09-049b958911.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarn/cache/@babel-plugin-transform-object-rest-spread-npm-7.28.4-bc45781f0c-2063672ba4.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarn/cache/@babel-plugin-transform-optional-catch-binding-npm-7.27.1-5810c95838-f4356b04cf.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarn/cache/@babel-plugin-transform-optional-chaining-npm-7.28.5-18f86d8ec3-78c2be52b3.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarn/cache/@babel-plugin-transform-private-methods-npm-7.27.1-71100e51a7-c76f8f6056.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarn/cache/@babel-plugin-transform-private-property-in-object-npm-7.27.1-b7636d14a5-af539af1bd.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarn/cache/@babel-plugin-transform-react-jsx-npm-7.27.1-a79a899a4d-960d36e5d1.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarn/cache/@babel-plugin-transform-regenerator-npm-7.28.4-13f2152eb3-2aa99b3a7b.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarn/cache/@babel-plugin-transform-regexp-modifiers-npm-7.27.1-cee91a1fcf-f6cb385fe0.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarn/cache/@babel-plugin-transform-runtime-npm-7.28.5-eb48e41215-5bb66f366c.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarn/cache/@babel-plugin-transform-spread-npm-7.27.1-93b5426802-58b08085ee.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarn/cache/@babel-plugin-transform-typescript-npm-7.28.5-bc6baf34e8-202785e9cc.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarn/cache/@babel-plugin-transform-unicode-property-regex-npm-7.27.1-b5fb4d5460-5d99c89537.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarn/cache/@babel-plugin-transform-unicode-sets-regex-npm-7.27.1-5b2c0a4c1f-295126074c.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarn/cache/@babel-preset-env-npm-7.28.5-6424c6f247-9e17ba89c5.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarn/cache/@babel-register-npm-7.28.3-19c1fd43d2-179b6a5d49.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarn/cache/@babel-runtime-npm-7.28.4-31bc1b0001-934b0a0460.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarn/cache/@babel-template-npm-7.27.2-77e67eabbd-ff5628bc06.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarn/cache/@babel-traverse-npm-7.28.5-2b51d83636-e028ee9654.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarn/cache/@babel-types-npm-7.28.5-582d7cca8a-5bc266af9e.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarn/cache/@eslint-community-eslint-utils-npm-4.9.0-fe45a08548-ae9b98eea0.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarn/cache/@isaacs-balanced-match-npm-4.0.1-8965afafe6-102fbc6d2c.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarn/cache/@isaacs-brace-expansion-npm-5.0.0-754d3cb3f5-d7a3b8b0dd.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarn/cache/@sinclair-typebox-npm-0.27.8-23e206d653-00bd7362a3.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarn/cache/@supabase-auth-js-npm-2.89.0-4345d764d3-a509f0e99f.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarn/cache/@supabase-functions-js-npm-2.89.0-3e45359526-692f343e9c.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarn/cache/@supabase-postgrest-js-npm-2.89.0-5d526f9f2d-15b7f6c38b.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarn/cache/@supabase-realtime-js-npm-2.89.0-17fbcf3b69-da1c876d42.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarn/cache/@supabase-storage-js-npm-2.89.0-20c91d1cf0-83616b8348.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarn/cache/@supabase-supabase-js-npm-2.89.0-0dd1a09dc2-557a561466.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarn/cache/@types-react-npm-18.3.27-f47dadcbab-c74d0ab515.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarn/cache/acorn-npm-8.15.0-0764cf600e-309c6b49ae.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarn/cache/ajv-npm-6.12.6-4b5105e2b2-874972efe5.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarn/cache/babel-plugin-polyfill-corejs2-npm-0.4.14-63d074d369-d654334c1b.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarn/cache/babel-plugin-polyfill-regenerator-npm-0.6.5-80a67684cc-ed1932fa9a.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarn/cache/baseline-browser-mapping-npm-2.8.32-733775c0a7-b26d79ca39.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarn/cache/browserslist-npm-4.28.0-c16ea3c47c-c19fe2c6f1.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarn/cache/caniuse-lite-npm-1.0.30001759-1f5e837824-db200cf52a.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarn/cache/core-js-compat-npm-3.47.0-dc3c0104ec-425c8cb4c3.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarn/cache/dedent-npm-1.7.0-ec8ff53a59-e07a21b7ae.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarn/cache/electron-to-chromium-npm-1.5.263-39696b5582-0ebdb43b8c.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarn/cache/encoding-npm-0.1.13-82a1837d30-bb98632f8f.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarn/cache/err-code-npm-2.0.3-082e0ff9a7-8b7b1be20d.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarn/cache/errorhandler-npm-1.5.1-bbeb9f9d1b-73b7abb08f.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarn/cache/es-abstract-npm-1.24.0-dc8c602e35-06b3d605e5.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarn/cache/es-iterator-helpers-npm-1.2.1-d00703ecc3-952808dd1d.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarn/cache/esquery-npm-1.6.0-16fee31531-08ec4fe446.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarn/cache/fast-xml-parser-npm-4.5.3-4c572a6316-cd6a184941.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarn/cache/fastq-npm-1.19.1-ca0a13ec3f-7691d1794f.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarn/cache/flatted-npm-3.3.3-ca455563b2-8c96c02fbe.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarn/cache/flow-parser-npm-0.292.0-fe21343631-a44fe8cb48.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarn/cache/glob-npm-13.0.0-8e50143ca8-963730222b.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarn/cache/http-errors-npm-2.0.0-3f1c503428-9b0a378266.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarn/cache/iconv-lite-npm-0.6.3-24b8aae27e-3f60d47a5c.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarn/cache/isexe-npm-3.1.1-9c0061eead-7fe1931ee4.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarn/cache/lodash-npm-4.17.21-6382451519-eb835a2e51.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarn/cache/lru-cache-npm-11.2.4-3f72660965-cb8cf72b80.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarn/cache/make-fetch-happen-npm-15.0.3-10a832fcad-4fb9dbb739.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarn/cache/minimatch-npm-10.1.1-453db4ee1a-8820c0be92.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarn/cache/minimatch-npm-3.1.2-9405269906-c154e56640.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarn/cache/minipass-fetch-npm-5.0.0-e53c2bae4c-416645d1e5.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarn/cache/minipass-npm-7.1.2-3a5327d36d-2bfd325b95.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarn/cache/minipass-sized-npm-1.0.3-306d86f432-79076749fc.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarn/cache/node-gyp-npm-12.1.0-0690767ce9-198d91c535.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarn/cache/node-releases-npm-2.0.27-b2d1b8de4a-a9a54079d8.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarn/cache/nodemon-npm-3.1.11-eb55b13338-9af4cce526.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarn/cache/path-scurry-npm-2.0.1-7744619e5d-a022c6c38f.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarn/cache/prettier-linter-helpers-npm-1.0.0-6925131a7e-00ce8011cf.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarn/cache/promise-retry-npm-2.0.1-871f0b01b7-f96a3f6d90.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarn/cache/react-native-safe-area-context-npm-4.14.1-14b9789f21-acf94ea2a3.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarn/cache/resolve-npm-2.0.0-next.5-0e83bf26ee-a73ac69a1c.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarn/cache/resolve-patch-99efc4a639-064d09c180.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarn/cache/retry-npm-0.12.0-72ac7fb4cc-623bd7d2e5.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarn/cache/semver-npm-7.7.3-9cf7b3b46c-f013a3ee46.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarn/cache/send-npm-0.19.0-4297594770-5ae11bd900.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarn/cache/serve-static-npm-1.16.2-5d8e560aec-dffc52feb4.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarn/cache/ssri-npm-13.0.0-f5fa93375d-9705dff9e6.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarn/cache/statuses-npm-2.0.1-81d2b97fee-18c7623fdb.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarn/cache/tar-npm-7.5.2-6d8cfb7a13-192559b0e7.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarn/cache/terser-npm-5.44.1-48464a937a-1113c5711b.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarn/cache/update-browserslist-db-npm-1.1.4-55ef7b4ab9-b757805a63.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarn/cache/which-npm-6.0.0-48f25f0ec8-df19b2cd8a.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarn/cache/which-typed-array-npm-1.1.19-e664d1e89c-162d2a07f6.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarn/cache/ws-npm-8.18.3-665d39209d-d64ef16312.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarn/install-state.gz" beforeDir="false" afterPath="$PROJECT_DIR$/.yarn/install-state.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/App.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/android/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/generated/assets/createBundleReleaseJsAndAssets/index.android.bundle" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/generated/assets/createBundleReleaseJsAndAssets/index.android.bundle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/generated/source/buildConfig/release/com/zinngle/app/BuildConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/generated/source/buildConfig/release/com/zinngle/app/BuildConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/generated/sourcemaps/react/release/index.android.bundle.map" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/generated/sourcemaps/react/release/index.android.bundle.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/apk_ide_redirect_file/release/createReleaseApkListingFileRedirect/redirect.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/assets/release/mergeReleaseAssets/index.android.bundle" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/assets/release/mergeReleaseAssets/index.android.bundle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/binary_art_profile/release/compileReleaseArtProfile/baseline.prof" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/binary_art_profile/release/compileReleaseArtProfile/baseline.prof" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/bundle_manifest/release/processApplicationManifestReleaseForBundle/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/bundle_manifest/release/processApplicationManifestReleaseForBundle/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/PLACEHOLDER.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/compressed_assets/release/compressReleaseAssets/out/assets/index.android.bundle.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/default_proguard_files/global/proguard-android-optimize.txt-8.4.1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/default_proguard_files/global/proguard-android.txt-8.4.1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/default_proguard_files/global/proguard-defaults.txt-8.4.1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/desugar_graph/debug/dexBuilderDebug/out/currentProject/dirs_bucket_0/graph.bin" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/desugar_graph/debug/dexBuilderDebug/out/currentProject/dirs_bucket_0/graph.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/desugar_graph/debug/dexBuilderDebug/out/currentProject/dirs_bucket_1/graph.bin" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/desugar_graph/debug/dexBuilderDebug/out/currentProject/dirs_bucket_1/graph.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/desugar_graph/release/dexBuilderRelease/out/currentProject/dirs_bucket_0/graph.bin" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/desugar_graph/release/dexBuilderRelease/out/currentProject/dirs_bucket_0/graph.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/desugar_graph/release/dexBuilderRelease/out/currentProject/dirs_bucket_1/graph.bin" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/desugar_graph/release/dexBuilderRelease/out/currentProject/dirs_bucket_1/graph.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/dex/debug/mergeLibDexDebug/0/classes.dex" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/dex/debug/mergeLibDexDebug/0/classes.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/dex/release/mergeDexRelease/classes.dex" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/dex/release/mergeDexRelease/classes.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/dex_metadata_directory/release/compileReleaseArtProfile/0/.dm" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/dex_metadata_directory/release/compileReleaseArtProfile/0/.dm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/dex_metadata_directory/release/compileReleaseArtProfile/1/.dm" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/dex_metadata_directory/release/compileReleaseArtProfile/1/.dm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/incremental/debug-mergeJavaRes/merge-state" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/incremental/debug-mergeJavaRes/merge-state" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/0ey8Wjbg0HJd0AHpZmmYwEjkAMc=" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/0ey8Wjbg0HJd0AHpZmmYwEjkAMc=" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/2rW0iCMiH5fZ_vEiOU9yVSV_7ds=" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/2rW0iCMiH5fZ_vEiOU9yVSV_7ds=" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/4TM1yjzQtlsjo2TJh9PlncVbCf8=" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/4TM1yjzQtlsjo2TJh9PlncVbCf8=" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/4WWn3B6XRy_kg5jDYvDhOKE_fT4=" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/4WWn3B6XRy_kg5jDYvDhOKE_fT4=" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/6HgFb+Whl6b24nKAlGKIFGlxjlg=" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/6HgFb+Whl6b24nKAlGKIFGlxjlg=" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/8GICTm34CmHn13TfXE9jauP4SdA=" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/8GICTm34CmHn13TfXE9jauP4SdA=" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/9nBEpq6nGwSIIvTLUHI4xGUAlBY=" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/9nBEpq6nGwSIIvTLUHI4xGUAlBY=" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/A54U4MFgtPKuGXw1Y6OiL_4HxGQ=" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/A54U4MFgtPKuGXw1Y6OiL_4HxGQ=" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/BehTu1YTYm5TprlJDYpVrXD0HmA=" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/BehTu1YTYm5TprlJDYpVrXD0HmA=" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/BqQkD8IzyCJCBSQY99jtxDdw6yk=" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/BqQkD8IzyCJCBSQY99jtxDdw6yk=" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/EPzfmtYGYqQeBPW4vQQLLBIgx9Q=" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/EPzfmtYGYqQeBPW4vQQLLBIgx9Q=" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/FveqTblmLYkA6dDql0_uGhmggOI=" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/FveqTblmLYkA6dDql0_uGhmggOI=" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/OXECMG7t05VY0R7RwpzfoFbY0r4=" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/OXECMG7t05VY0R7RwpzfoFbY0r4=" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/Of19Bi4xQo9uHMdPxQldeXKZuY8=" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/Of19Bi4xQo9uHMdPxQldeXKZuY8=" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/P89k1j3BP8TGSGiPO5RHEAUASFY=" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/P89k1j3BP8TGSGiPO5RHEAUASFY=" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/PAQLjjugj6rTPnbeKYr8YSn4XVI=" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/PAQLjjugj6rTPnbeKYr8YSn4XVI=" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/RIgr2GezMH13wW1bGICvTkngb9E=" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/RIgr2GezMH13wW1bGICvTkngb9E=" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/RbI1g6VYTJUrdYQIUWHodEi+rbA=" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/RbI1g6VYTJUrdYQIUWHodEi+rbA=" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/W78uJ0OIBM04IipGtynm3V7t5Gc=" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/W78uJ0OIBM04IipGtynm3V7t5Gc=" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/Xmio0xGHlZUTE0XDner26xk2QZI=" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/Xmio0xGHlZUTE0XDner26xk2QZI=" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/YG3LGEDxmRB5Tdxkly9oaRcaG+0=" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/YG3LGEDxmRB5Tdxkly9oaRcaG+0=" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/_p4wsNBMJpJ4cWF0CL+dfIhy4WI=" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/_p4wsNBMJpJ4cWF0CL+dfIhy4WI=" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/fl6XpC9gxE5ILJAWF6qovzRbQ98=" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/fl6XpC9gxE5ILJAWF6qovzRbQ98=" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/fwwObh+KsBn5Wwa9J5W5RFJLqdc=" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/fwwObh+KsBn5Wwa9J5W5RFJLqdc=" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/gLR7xntCNkqShwVh5W+_Ls22GKs=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/iBAdDDIkDAKAI2l5tFD9rC+U8yU=" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/iBAdDDIkDAKAI2l5tFD9rC+U8yU=" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/nA9Foi2kTE1Us8v0ZsHoPK+c1DQ=" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/nA9Foi2kTE1Us8v0ZsHoPK+c1DQ=" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/nTDsAacd0kkerhMLdLXrzOeKWGo=" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/nTDsAacd0kkerhMLdLXrzOeKWGo=" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/nddYY1SWXxvMpV6l4zuMO6hQmpE=" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/nddYY1SWXxvMpV6l4zuMO6hQmpE=" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/nx_iQZVZAPMfOwg83DHfVULdV_E=" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/nx_iQZVZAPMfOwg83DHfVULdV_E=" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/p436lZY+Gujrl7cS5Ep_UVQ13lA=" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/p436lZY+Gujrl7cS5Ep_UVQ13lA=" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/pT1bqyJJSrqGiSucLj3xMXBN4mg=" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/pT1bqyJJSrqGiSucLj3xMXBN4mg=" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/tL7VyWWZ792fGjpN8elV5fTKhYY=" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/tL7VyWWZ792fGjpN8elV5fTKhYY=" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/tpaXflEXLEqNmek94Szyu9L5L+w=" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/tpaXflEXLEqNmek94Szyu9L5L+w=" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/v8H56rM8pquUDzWnSnCgbPKxlzI=" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/v8H56rM8pquUDzWnSnCgbPKxlzI=" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/vSdAcpYnbcGRyF3xcj7GL3f6pG4=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/vpv7YffNye2dmV1pw_4MkLl6Cog=" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/vpv7YffNye2dmV1pw_4MkLl6Cog=" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/w9gvThbqX434f5Ci5e4FC_1lqe4=" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/w9gvThbqX434f5Ci5e4FC_1lqe4=" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/yRCcEWmyRgmab3Zeof1IFz+UIus=" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/yRCcEWmyRgmab3Zeof1IFz+UIus=" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/zhlJ2RU6mOe_eQaAOzdHT4X3e+w=" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/zhlJ2RU6mOe_eQaAOzdHT4X3e+w=" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/incremental/debug/mergeDebugResources/compile-file-map.properties" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/incremental/debug/mergeDebugResources/compile-file-map.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/incremental/debug/packageDebugResources/compile-file-map.properties" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/incremental/debug/packageDebugResources/compile-file-map.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/incremental/lintVitalAnalyzeRelease/module.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/incremental/lintVitalAnalyzeRelease/release-artifact-dependencies.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/incremental/lintVitalAnalyzeRelease/release-artifact-libraries.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/incremental/lintVitalAnalyzeRelease/release.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/incremental/mergeDebugAssets/merger.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/incremental/mergeDebugAssets/merger.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/incremental/packageRelease/tmp/release/dex-renamer-state.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/incremental/packageRelease/tmp/release/zip-cache/androidResources" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/incremental/packageRelease/tmp/release/zip-cache/javaResources0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/incremental/release-mergeJavaRes/merge-state" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/incremental/release-mergeJavaRes/merge-state" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/incremental/release-mergeJavaRes/zip-cache/0ey8Wjbg0HJd0AHpZmmYwEjkAMc=" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/incremental/release-mergeJavaRes/zip-cache/0ey8Wjbg0HJd0AHpZmmYwEjkAMc=" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/incremental/release-mergeJavaRes/zip-cache/2rW0iCMiH5fZ_vEiOU9yVSV_7ds=" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/incremental/release-mergeJavaRes/zip-cache/2rW0iCMiH5fZ_vEiOU9yVSV_7ds=" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/incremental/release-mergeJavaRes/zip-cache/4TM1yjzQtlsjo2TJh9PlncVbCf8=" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/incremental/release-mergeJavaRes/zip-cache/4TM1yjzQtlsjo2TJh9PlncVbCf8=" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/incremental/release-mergeJavaRes/zip-cache/4WWn3B6XRy_kg5jDYvDhOKE_fT4=" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/incremental/release-mergeJavaRes/zip-cache/4WWn3B6XRy_kg5jDYvDhOKE_fT4=" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/incremental/release-mergeJavaRes/zip-cache/6HgFb+Whl6b24nKAlGKIFGlxjlg=" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/incremental/release-mergeJavaRes/zip-cache/6HgFb+Whl6b24nKAlGKIFGlxjlg=" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/incremental/release-mergeJavaRes/zip-cache/8GICTm34CmHn13TfXE9jauP4SdA=" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/incremental/release-mergeJavaRes/zip-cache/8GICTm34CmHn13TfXE9jauP4SdA=" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/incremental/release-mergeJavaRes/zip-cache/9nBEpq6nGwSIIvTLUHI4xGUAlBY=" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/incremental/release-mergeJavaRes/zip-cache/9nBEpq6nGwSIIvTLUHI4xGUAlBY=" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/incremental/release-mergeJavaRes/zip-cache/A54U4MFgtPKuGXw1Y6OiL_4HxGQ=" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/incremental/release-mergeJavaRes/zip-cache/A54U4MFgtPKuGXw1Y6OiL_4HxGQ=" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/incremental/release-mergeJavaRes/zip-cache/BehTu1YTYm5TprlJDYpVrXD0HmA=" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/incremental/release-mergeJavaRes/zip-cache/BehTu1YTYm5TprlJDYpVrXD0HmA=" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/incremental/release-mergeJavaRes/zip-cache/BqQkD8IzyCJCBSQY99jtxDdw6yk=" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/incremental/release-mergeJavaRes/zip-cache/BqQkD8IzyCJCBSQY99jtxDdw6yk=" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/incremental/release-mergeJavaRes/zip-cache/EPzfmtYGYqQeBPW4vQQLLBIgx9Q=" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/incremental/release-mergeJavaRes/zip-cache/EPzfmtYGYqQeBPW4vQQLLBIgx9Q=" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/incremental/release-mergeJavaRes/zip-cache/FveqTblmLYkA6dDql0_uGhmggOI=" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/incremental/release-mergeJavaRes/zip-cache/FveqTblmLYkA6dDql0_uGhmggOI=" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/incremental/release-mergeJavaRes/zip-cache/OXECMG7t05VY0R7RwpzfoFbY0r4=" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/incremental/release-mergeJavaRes/zip-cache/OXECMG7t05VY0R7RwpzfoFbY0r4=" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/incremental/release-mergeJavaRes/zip-cache/Of19Bi4xQo9uHMdPxQldeXKZuY8=" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/incremental/release-mergeJavaRes/zip-cache/Of19Bi4xQo9uHMdPxQldeXKZuY8=" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/incremental/release-mergeJavaRes/zip-cache/P89k1j3BP8TGSGiPO5RHEAUASFY=" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/incremental/release-mergeJavaRes/zip-cache/P89k1j3BP8TGSGiPO5RHEAUASFY=" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/incremental/release-mergeJavaRes/zip-cache/PAQLjjugj6rTPnbeKYr8YSn4XVI=" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/incremental/release-mergeJavaRes/zip-cache/PAQLjjugj6rTPnbeKYr8YSn4XVI=" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/incremental/release-mergeJavaRes/zip-cache/RIgr2GezMH13wW1bGICvTkngb9E=" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/incremental/release-mergeJavaRes/zip-cache/RIgr2GezMH13wW1bGICvTkngb9E=" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/incremental/release-mergeJavaRes/zip-cache/RbI1g6VYTJUrdYQIUWHodEi+rbA=" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/incremental/release-mergeJavaRes/zip-cache/RbI1g6VYTJUrdYQIUWHodEi+rbA=" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/incremental/release-mergeJavaRes/zip-cache/W78uJ0OIBM04IipGtynm3V7t5Gc=" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/incremental/release-mergeJavaRes/zip-cache/W78uJ0OIBM04IipGtynm3V7t5Gc=" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/incremental/release-mergeJavaRes/zip-cache/Xmio0xGHlZUTE0XDner26xk2QZI=" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/incremental/release-mergeJavaRes/zip-cache/Xmio0xGHlZUTE0XDner26xk2QZI=" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/incremental/release-mergeJavaRes/zip-cache/YG3LGEDxmRB5Tdxkly9oaRcaG+0=" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/incremental/release-mergeJavaRes/zip-cache/YG3LGEDxmRB5Tdxkly9oaRcaG+0=" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/incremental/release-mergeJavaRes/zip-cache/_p4wsNBMJpJ4cWF0CL+dfIhy4WI=" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/incremental/release-mergeJavaRes/zip-cache/_p4wsNBMJpJ4cWF0CL+dfIhy4WI=" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/incremental/release-mergeJavaRes/zip-cache/fl6XpC9gxE5ILJAWF6qovzRbQ98=" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/incremental/release-mergeJavaRes/zip-cache/fl6XpC9gxE5ILJAWF6qovzRbQ98=" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/incremental/release-mergeJavaRes/zip-cache/fwwObh+KsBn5Wwa9J5W5RFJLqdc=" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/incremental/release-mergeJavaRes/zip-cache/fwwObh+KsBn5Wwa9J5W5RFJLqdc=" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/incremental/release-mergeJavaRes/zip-cache/gLR7xntCNkqShwVh5W+_Ls22GKs=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/incremental/release-mergeJavaRes/zip-cache/iBAdDDIkDAKAI2l5tFD9rC+U8yU=" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/incremental/release-mergeJavaRes/zip-cache/iBAdDDIkDAKAI2l5tFD9rC+U8yU=" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/incremental/release-mergeJavaRes/zip-cache/nA9Foi2kTE1Us8v0ZsHoPK+c1DQ=" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/incremental/release-mergeJavaRes/zip-cache/nA9Foi2kTE1Us8v0ZsHoPK+c1DQ=" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/incremental/release-mergeJavaRes/zip-cache/nTDsAacd0kkerhMLdLXrzOeKWGo=" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/incremental/release-mergeJavaRes/zip-cache/nTDsAacd0kkerhMLdLXrzOeKWGo=" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/incremental/release-mergeJavaRes/zip-cache/nddYY1SWXxvMpV6l4zuMO6hQmpE=" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/incremental/release-mergeJavaRes/zip-cache/nddYY1SWXxvMpV6l4zuMO6hQmpE=" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/incremental/release-mergeJavaRes/zip-cache/nx_iQZVZAPMfOwg83DHfVULdV_E=" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/incremental/release-mergeJavaRes/zip-cache/nx_iQZVZAPMfOwg83DHfVULdV_E=" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/incremental/release-mergeJavaRes/zip-cache/p436lZY+Gujrl7cS5Ep_UVQ13lA=" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/incremental/release-mergeJavaRes/zip-cache/p436lZY+Gujrl7cS5Ep_UVQ13lA=" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/incremental/release-mergeJavaRes/zip-cache/pT1bqyJJSrqGiSucLj3xMXBN4mg=" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/incremental/release-mergeJavaRes/zip-cache/pT1bqyJJSrqGiSucLj3xMXBN4mg=" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/incremental/release-mergeJavaRes/zip-cache/tL7VyWWZ792fGjpN8elV5fTKhYY=" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/incremental/release-mergeJavaRes/zip-cache/tL7VyWWZ792fGjpN8elV5fTKhYY=" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/incremental/release-mergeJavaRes/zip-cache/tpaXflEXLEqNmek94Szyu9L5L+w=" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/incremental/release-mergeJavaRes/zip-cache/tpaXflEXLEqNmek94Szyu9L5L+w=" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/incremental/release-mergeJavaRes/zip-cache/v8H56rM8pquUDzWnSnCgbPKxlzI=" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/incremental/release-mergeJavaRes/zip-cache/v8H56rM8pquUDzWnSnCgbPKxlzI=" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/incremental/release-mergeJavaRes/zip-cache/vSdAcpYnbcGRyF3xcj7GL3f6pG4=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/incremental/release-mergeJavaRes/zip-cache/vpv7YffNye2dmV1pw_4MkLl6Cog=" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/incremental/release-mergeJavaRes/zip-cache/vpv7YffNye2dmV1pw_4MkLl6Cog=" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/incremental/release-mergeJavaRes/zip-cache/w9gvThbqX434f5Ci5e4FC_1lqe4=" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/incremental/release-mergeJavaRes/zip-cache/w9gvThbqX434f5Ci5e4FC_1lqe4=" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/incremental/release-mergeJavaRes/zip-cache/yRCcEWmyRgmab3Zeof1IFz+UIus=" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/incremental/release-mergeJavaRes/zip-cache/yRCcEWmyRgmab3Zeof1IFz+UIus=" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/incremental/release-mergeJavaRes/zip-cache/zhlJ2RU6mOe_eQaAOzdHT4X3e+w=" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/incremental/release-mergeJavaRes/zip-cache/zhlJ2RU6mOe_eQaAOzdHT4X3e+w=" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/incremental/release/mergeReleaseResources/compile-file-map.properties" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/incremental/release/mergeReleaseResources/compile-file-map.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/incremental/release/packageReleaseResources/compile-file-map.properties" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/incremental/release/packageReleaseResources/compile-file-map.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/intermediary_bundle/release/packageReleaseBundle/intermediary-bundle.aab" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/intermediary_bundle/release/packageReleaseBundle/intermediary-bundle.aab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/zinngle/app/BuildConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/com/zinngle/app/BuildConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/linked_res_for_bundle/release/bundleReleaseResources/bundled-res.ap_" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/linked_res_for_bundle/release/bundleReleaseResources/bundled-res.ap_" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/lint-cache/lintVitalAnalyzeRelease/lint-cache-version.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/lint-cache/lintVitalAnalyzeRelease/maven.google/com/google/firebase/group-index.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/lint-cache/lintVitalAnalyzeRelease/maven.google/master-index.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/lint-cache/lintVitalAnalyzeRelease/sdk_index/snapshot.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/lint-cache/lintVitalReportRelease/lint-cache-version.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/lint_vital_intermediate_text_report/release/lintVitalReportRelease/lint-results-release.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/lint_vital_partial_results/release/lintVitalAnalyzeRelease/out/lint-resources.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/lint_vital_report_lint_model/release/generateReleaseLintVitalReportModel/module.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/lint_vital_report_lint_model/release/generateReleaseLintVitalReportModel/release-artifact-dependencies.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/lint_vital_report_lint_model/release/generateReleaseLintVitalReportModel/release-artifact-libraries.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/lint_vital_report_lint_model/release/generateReleaseLintVitalReportModel/release.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/lint_vital_return_value/release/lintVitalReportRelease/return-value-release.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/manifest_merge_blame_file/release/processReleaseMainManifest/manifest-merger-blame-release-report.txt" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/manifest_merge_blame_file/release/processReleaseMainManifest/manifest-merger-blame-release-report.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/merged_manifest/release/processReleaseMainManifest/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/merged_manifest/release/processReleaseMainManifest/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/merged_manifests/release/processReleaseManifest/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/merged_manifests/release/processReleaseManifest/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/merged_manifests/release/processReleaseManifest/output-metadata.json" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/merged_manifests/release/processReleaseManifest/output-metadata.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/module_bundle/release/buildReleasePreBundle/base.zip" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/module_bundle/release/buildReleasePreBundle/base.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/optimized_processed_res/release/optimizeReleaseResources/output-metadata.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/optimized_processed_res/release/optimizeReleaseResources/resources-release-optimize.ap_" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/packaged_manifests/release/processReleaseManifestForPackage/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/packaged_manifests/release/processReleaseManifestForPackage/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/packaged_manifests/release/processReleaseManifestForPackage/output-metadata.json" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/packaged_manifests/release/processReleaseManifestForPackage/output-metadata.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/processed_res/release/processReleaseResources/out/output-metadata.json" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/processed_res/release/processReleaseResources/out/output-metadata.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/processed_res/release/processReleaseResources/out/resources-release.ap_" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/processed_res/release/processReleaseResources/out/resources-release.ap_" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/project_dex_archive/release/dexBuilderRelease/out/com/zinngle/app/BuildConfig.dex" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/project_dex_archive/release/dexBuilderRelease/out/com/zinngle/app/BuildConfig.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/sdk_dependency_data/release/sdkReleaseDependencyData/sdkDependencyData.pb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/signing_config_versions/release/writeReleaseSigningConfigVersions/signing-config-versions.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/sourcemaps/react/release/index.android.bundle.compiler.map" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/sourcemaps/react/release/index.android.bundle.compiler.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/sourcemaps/react/release/index.android.bundle.packager.map" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/sourcemaps/react/release/index.android.bundle.packager.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/proto.tab" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/proto.tab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/proto.tab.values.at" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/proto.tab.values.at" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/kotlin/compileDebugKotlin/cacheable/last-build.bin" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/kotlin/compileDebugKotlin/cacheable/last-build.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/kotlin/compileDebugKotlin/local-state/build-history.bin" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/kotlin/compileDebugKotlin/local-state/build-history.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/kotlin/compileReleaseKotlin/cacheable/caches-jvm/jvm/kotlin/proto.tab" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/kotlin/compileReleaseKotlin/cacheable/caches-jvm/jvm/kotlin/proto.tab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/kotlin/compileReleaseKotlin/cacheable/caches-jvm/jvm/kotlin/proto.tab.values.at" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/kotlin/compileReleaseKotlin/cacheable/caches-jvm/jvm/kotlin/proto.tab.values.at" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/kotlin/compileReleaseKotlin/cacheable/last-build.bin" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/kotlin/compileReleaseKotlin/cacheable/last-build.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/kotlin/compileReleaseKotlin/local-state/build-history.bin" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/kotlin/compileReleaseKotlin/local-state/build-history.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/outputs/apk/debug/app-debug.apk" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/outputs/apk/debug/app-debug.apk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/outputs/apk/release/app-release.apk" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/outputs/apk/release/baselineProfiles/0/app-release.dm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/outputs/apk/release/baselineProfiles/1/app-release.dm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/outputs/apk/release/output-metadata.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/outputs/bundle/release/app-release.aab" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/outputs/bundle/release/app-release.aab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/outputs/native-debug-symbols/release/native-debug-symbols.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/outputs/sdk-dependencies/release/sdkDependencies.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/tmp/compileReleaseJavaWithJavac/compileTransaction/stash-dir/BuildConfig.class.uniqueId0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build/tmp/compileReleaseJavaWithJavac/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/tmp/compileReleaseJavaWithJavac/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/android/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Auth.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Auth.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Onboarding.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Onboarding.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/UserContext.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/UserContext.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/WelcomeIntro.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/WelcomeIntro.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/constants.ts" beforeDir="false" afterPath="$PROJECT_DIR$/constants.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/metro.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/metro.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/supabase.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -197,9 +170,10 @@
     <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 1
 }</component>
-  <component name="ProjectId" id="389oaXiG0GHoBOEv1ouvuTAXOx1" />
+  <component name="ProjectId" id="3Ar1FGy4bK3IAuHIe6VO3nbFdwk" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -216,23 +190,22 @@
     &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;Errors&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;AndroidSdkUpdater&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ADMIN\StudioProjects\projects\zingle\services" />
+    </key>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="e71d5404-a4cd-4b0a-8bc9-5704b0542d53" name="Changes" comment="" />
-      <created>1768221213143</created>
+      <changelist id="2ba9eb06-3023-4630-a153-07e411dd405d" name="Changes" comment="" />
+      <created>1773335772343</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1768221213143</updated>
+      <updated>1773335772343</updated>
     </task>
     <servers />
-  </component>
-  <component name="dal_apis">
-    <option name="consented" value="true" />
   </component>
 </project>

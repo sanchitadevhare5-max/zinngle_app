@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { 
-    View, Text, StyleSheet, SafeAreaView, TouchableOpacity, Switch, 
-    TextInput, ScrollView, Platform, Alert
+    View, Text, StyleSheet, SafeAreaView, TouchableOpacity, 
+    TextInput, ScrollView, Platform, Alert, ActivityIndicator
 } from 'react-native';
 import DateTimePicker, { DateTimePickerEvent } from '@react-native-community/datetimepicker';
 import { useUser } from './UserContext';
@@ -26,7 +26,7 @@ const Onboarding: React.FC<OnboardingProps> = ({ currentView, onChangeView, onCo
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    if (name && !username) { // Only generate if username is not already set
+    if (name && !username) {
       const randomSuffix = Math.floor(1000 + Math.random() * 9000);
       const generatedUsername = name.toLowerCase().replace(/\s+/g, '') + randomSuffix;
       setUsername(generatedUsername);
@@ -80,20 +80,27 @@ const Onboarding: React.FC<OnboardingProps> = ({ currentView, onChangeView, onCo
         return (
           <View style={styles.centerContainer}>
             <Text style={styles.title}>How will you use Zinngle?</Text>
+            <Text style={styles.subtitle}>Choose your account type to continue.</Text>
             <TouchableOpacity style={styles.optionButton} onPress={() => onChangeView(ViewState.PROFILE_SETUP)}>
               <Text style={styles.optionIcon}>👤</Text>
-              <Text style={styles.optionText}>I'm a user</Text>
+              <View style={{flex: 1}}>
+                <Text style={styles.optionText}>I'm a user</Text>
+                <Text style={styles.optionSub}>I want to discover creators</Text>
+              </View>
             </TouchableOpacity>
             <TouchableOpacity style={styles.optionButton} onPress={() => onComplete('host')}>
               <Text style={styles.optionIcon}>⭐</Text>
-              <Text style={styles.optionText}>I'm a host</Text>
+              <View style={{flex: 1}}>
+                <Text style={styles.optionText}>I'm a host</Text>
+                <Text style={styles.optionSub}>I want to share my content</Text>
+              </View>
             </TouchableOpacity>
           </View>
         );
 
       case ViewState.PROFILE_SETUP:
         return (
-            <ScrollView contentContainerStyle={styles.formContainer}>
+            <View style={{flex: 1}}>
                 <Text style={styles.title}>Complete Your Profile</Text>
                 <Text style={styles.subtitle}>Let's get to know you better.</Text>
 
@@ -112,7 +119,7 @@ const Onboarding: React.FC<OnboardingProps> = ({ currentView, onChangeView, onCo
                     <DateTimePicker
                         value={dob || new Date()}
                         mode="date"
-                        display="spinner"
+                        display={Platform.OS === 'ios' ? 'spinner' : 'default'}
                         onChange={handleDateChange}
                     />
                 )}
@@ -120,13 +127,14 @@ const Onboarding: React.FC<OnboardingProps> = ({ currentView, onChangeView, onCo
                 <TouchableOpacity style={styles.mainButton} onPress={() => onChangeView(ViewState.INTERESTS_SELECT)}>
                     <Text style={styles.mainButtonText}>Continue</Text>
                 </TouchableOpacity>
-          </ScrollView>
+          </View>
         );
 
       case ViewState.INTERESTS_SELECT:
         return (
-          <View style={styles.centerContainer}>
+          <View style={{flex: 1}}>
             <Text style={styles.title}>What are you into?</Text>
+            <Text style={styles.subtitle}>Select at least 3 interests.</Text>
             <View style={styles.interestGrid}>
               {INTERESTS.map(interest => (
                 <TouchableOpacity 
@@ -145,7 +153,7 @@ const Onboarding: React.FC<OnboardingProps> = ({ currentView, onChangeView, onCo
               ))}
             </View>
             <TouchableOpacity style={styles.mainButton} onPress={handleFinishSetup} disabled={loading}>
-              <Text style={styles.mainButtonText}>{loading ? 'Saving...' : 'Finish Setup'}</Text>
+              {loading ? <ActivityIndicator color="white"/> : <Text style={styles.mainButtonText}>Finish Setup</Text>}
             </TouchableOpacity>
           </View>
         );
@@ -154,25 +162,32 @@ const Onboarding: React.FC<OnboardingProps> = ({ currentView, onChangeView, onCo
     }
   };
 
-  return <SafeAreaView style={styles.container}>{renderContent()}</SafeAreaView>;
+  return (
+    <SafeAreaView style={styles.container}>
+        <ScrollView contentContainerStyle={styles.scrollContent} keyboardShouldPersistTaps="handled">
+            {renderContent()}
+        </ScrollView>
+    </SafeAreaView>
+  );
 };
 
 
 const styles = StyleSheet.create({
     container: { flex: 1, backgroundColor: '#0f172a' },
-    centerContainer: { flex: 1, justifyContent: 'center', alignItems: 'center', padding: 24 },
-    formContainer: { flexGrow: 1, justifyContent: 'center', padding: 24 },
-    title: { fontSize: 28, fontWeight: 'bold', color: 'white', textAlign: 'center', marginBottom: 16 },
-    subtitle: { fontSize: 16, color: '#94a3b8', textAlign: 'center', marginBottom: 32 },
-    optionButton: { width: '100%', backgroundColor: '#1e293b', padding: 24, borderRadius: 16, alignItems: 'center', marginBottom: 16, borderWidth: 1, borderColor: '#334155' },
-    optionIcon: { fontSize: 40, marginBottom: 12 },
+    scrollContent: { flexGrow: 1, padding: 24, justifyContent: 'center' },
+    centerContainer: { width: '100%', alignItems: 'center' },
+    title: { fontSize: 30, fontWeight: 'bold', color: 'white', textAlign: 'center', marginBottom: 8 },
+    subtitle: { fontSize: 16, color: '#94a3b8', textAlign: 'center', marginBottom: 40, lineHeight: 24 },
+    optionButton: { width: '100%', backgroundColor: '#1e293b', padding: 20, borderRadius: 16, flexDirection: 'row', alignItems: 'center', marginBottom: 16, borderWidth: 1, borderColor: '#334155' },
+    optionIcon: { fontSize: 36, marginRight: 20 },
     optionText: { color: 'white', fontSize: 18, fontWeight: 'bold' },
-    input: { backgroundColor: '#1e293b', color: 'white', paddingHorizontal: 16, paddingVertical: 18, borderRadius: 12, fontSize: 16, marginBottom: 16 },
+    optionSub: { color: '#64748b', fontSize: 14, marginTop: 2 },
+    input: { backgroundColor: '#1e293b', color: 'white', paddingHorizontal: 16, paddingVertical: 18, borderRadius: 12, fontSize: 16, marginBottom: 20, borderWidth: 1, borderColor: '#334155' },
     dateText: { color: 'white', fontSize: 16 },
-    label: { color: '#94a3b8', fontSize: 12, fontWeight: 'bold', textTransform: 'uppercase', marginBottom: 8 },
-    mainButton: { backgroundColor: '#db2777', padding: 18, borderRadius: 12, alignItems: 'center', marginTop: 16 },
+    label: { color: '#94a3b8', fontSize: 12, fontWeight: 'bold', textTransform: 'uppercase', marginBottom: 10, letterSpacing: 1 },
+    mainButton: { backgroundColor: '#db2777', padding: 18, borderRadius: 12, alignItems: 'center', marginTop: 20 },
     mainButtonText: { color: 'white', fontWeight: 'bold', fontSize: 16 },
-    interestGrid: { flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center', marginBottom: 24 },
+    interestGrid: { flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center', marginBottom: 32 },
     interestChip: { backgroundColor: '#1e293b', paddingHorizontal: 20, paddingVertical: 12, borderRadius: 99, margin: 6, borderWidth: 1, borderColor: '#334155' },
     selectedChip: { backgroundColor: '#db2777', borderColor: '#db2777' },
     chipText: { color: 'white', fontWeight: 'bold' },

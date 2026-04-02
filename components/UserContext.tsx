@@ -1,5 +1,5 @@
 import React, { createContext, useState, useEffect, useContext } from 'react';
-import { supabase } from '../supabase';
+import { supabase } from '../services/supabase'; // Updated path
 import { Session, User } from '@supabase/supabase-js';
 
 interface Profile {
