@@ -13,7 +13,7 @@ export const AuthScreen: React.FC = () => {
 
   // When authentication is complete, navigate to the main app
   const handleComplete = () => {
-    navigation.navigate('Home');
+    navigation.navigate('Main');
   };
 
   return <Auth currentView={view} onChangeView={setView} onComplete={handleComplete} />;

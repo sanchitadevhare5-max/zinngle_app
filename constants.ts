@@ -23,11 +23,7 @@ export const RAZORPAY_CONFIG = {
   keyId: "rzp_test_Rb7drR7cAxtelX",
 };
 
-export const TWILIO_CONFIG = {
-  accountSid: "AC282272f3d30cb73fb41c9fbbfad6a28a",
-  authToken: "ca64d8bdb7f21fadb5f6ee99b5c8b5ce",
-  fromPhoneNumber: "+919786629516"
-};
+// Twilio deleted as requested. Switching to Firebase Phone Auth.
 
 const newHostData = [
   { name: "Naina Singh", age: 21, phone: "9651807830" },
